@@ -1,0 +1,157 @@
+@font-face {
+  font-family: Graphic-Regular;
+  src: url(../fonts/Graphik-Regular.ttf)
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Graphic-Regular;
+  outline: none;
+  border: none;
+}
+
+html,body {
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FFFBF5;
+}
+
+::placeholder {
+  font-size: 1rem;
+}
+
+.inputContainer {
+  background-color: rgb(32, 30, 30);
+  padding: 1.2rem;
+  margin-bottom: .6rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.inputContainer form input {
+  width: 100%;
+  padding: 1rem .8rem;
+  border-radius: .3rem;
+}
+
+.inputContainer button {
+  padding: .9rem 1.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: .3rem;
+  color: #FFFBF5;
+  background-color: #CD1818;
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  justify-content: center;
+  color: #FFFBF5;
+}
+
+.cards {
+  width: 19%;
+  /* flex:0 1 22%; */
+  /* flex-basis: 40%; */
+  transition: all .3s ease-in-out;
+  transform: scale(.95);
+  overflow: hidden;
+  border-radius: 1rem;
+  background: #272829;
+  box-shadow:  5px 5px 10px #23242523,
+             -5px -5px 10px #2b2b2d3b;
+}
+
+.cards:hover {
+  transform: scale(1.03,1.00)
+}
+
+.cards div img {
+  width: 100%;
+}
+
+.cardContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .8rem;
+}
+
+.cardContent h2 {
+  font-size: 1rem;
+  width: 75%;
+  /* white-space: nowrap; */
+}
+
+.cardContent h4 {
+  font-size: 1rem;
+  padding: .5rem;
+  border-radius: .3rem;
+}
+
+.greenColor {
+  background-color: #57E32C;
+}
+
+.redColor {
+  background-color: #ff4545;
+}
+
+.cardContent i {
+  font-size: .9rem;
+  color: #ffe234;
+  padding-left: .2rem;
+}
+
+.pagination {
+  display: flex;
+  gap: 1rem;
+  padding-block: .6rem 1rem;
+  justify-content: center;
+}
+
+.pagination button{
+  padding: .9rem 1.1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: .3rem;
+  color: #FFFBF5;
+  background-color: dodgerblue;
+}
+
+footer {
+  background-color: rgb(32, 30, 30);
+  padding-block: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+  display: block;
+  color: #FFFBF5;
+}
+
+@media (max-width:800px){
+  .cards{
+    width: 45%;
+  }
+}
+
+@media (max-width:556px){
+  .cards{
+    width: 90%;
+  }
+
+  .cardContainer {
+    gap: .1rem;
+  }
+  .cards:hover {
+    transform: scale(.95)
+  }
+}
